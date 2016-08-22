@@ -26,13 +26,16 @@ categories: jekyll
 修改[gem source](https://ruby.taobao.org/)
 
 ### Bundle
+
+	gem install bundle
+
 进入jekyll目录
 
 	bundle install
 
 本地预览
 	
-	bundle exec jekyll serve
+	jekyll serve
 
 
 
