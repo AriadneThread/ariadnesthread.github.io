@@ -35,7 +35,7 @@ categories: jekyll
 
 本地预览
 	
-	jekyll serve
+	bundle exec jekyll serve
 
 
 
