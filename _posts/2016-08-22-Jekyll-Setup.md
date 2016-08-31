@@ -17,8 +17,8 @@ categories: jekyll
 
 或使用Ruby version manager安装
 
+* rbenv (推荐)
 * rvm
-* rbenv (recommend)
 
 安装2.0以上Ruby，最新版本为佳。
 
