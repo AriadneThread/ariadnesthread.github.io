@@ -21,3 +21,5 @@ timezone: Asia/Shanghai
 
 # Build settings
 markdown: kramdown
+
+exclude: [vendor]
