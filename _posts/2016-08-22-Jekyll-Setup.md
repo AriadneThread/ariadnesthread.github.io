@@ -38,7 +38,7 @@ categories: jekyll
 	bundle exec jekyll serve
 
 
-# Docker
+<!--# Docker
 
 上面的步骤看起来很少，但在实际操作的时候，还会有不少出错的地方。那么对于环境打包，`Docker`手到擒来。去[hub](hub.docker.com)看了下果然有`Jekyll`的官方`image`。
 
@@ -52,3 +52,4 @@ Run Jekyll container
 
 	docker run -i -t jekyll/jekyll /bin/bash
 	
+-->
