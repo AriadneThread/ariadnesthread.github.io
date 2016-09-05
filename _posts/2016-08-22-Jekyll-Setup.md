@@ -50,5 +50,5 @@ Pull Jekyll image
 	
 Run Jekyll container
 
-	run -i -t jekyll/jekyll /bin/bash
+	docker run -i -t jekyll/jekyll /bin/bash
 	
