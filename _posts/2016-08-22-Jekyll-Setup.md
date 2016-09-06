@@ -56,14 +56,13 @@ Run in container
 
 解释下上面的命令：将`~/PATH_OF_YOUR_BLOG_SOURCE`路径共享到`container`的`/blog`, 本地端口`4000`对应`container`的`4000`，后边就是指定`image`，运行`bash`。
 
-进入`container`后
+进入`container`后，进入目录
 
 	cd /blog
 
-后看到自己的blog文件
+看到自己的blog文件
 
 	bundle install
-	
 	
 本地预览
 	
