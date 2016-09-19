@@ -14,21 +14,33 @@ SQLCiper是一个在SQLite基础之上进行扩展的开源加密库，它占用
 ![](http://note.youdao.com/yws/public/resource/fd68ae4cb40d4207252220d4afc5e379/AC336F1A1A864D6E92AFDE2043ABB890)
 
 上面是官方的解释，简单的总结一下：
+
 1）加密性能高，开销小，只要5%-15%的开销用于加密
+
 2）完全做到数据库的100%加密
+
 3）采用良好的加密方式（CBC加密模式）
+
 4）使用方便，做到应用级别加密
+
 5）采用OpenSSL加密库提供的算法
 
 下面开始介绍SQLCipher加密
 ## SQLCipher加密篇
 SQLCipher使用很简单，上面说道它是在SQLite进行扩展的开源加密库，所以用法和SQLite是是一样的，只是需要注意import导入不同的包而已。
+
 1. 首先进入https://github.com/sqlcipher下载sqlcipher-android-tests，官方下载地址：https://github.com/sqlcipher/sqlcipher-android-tests；
+
 2. 下载后的项目导入，并将libs下面的文件移植到你的项目中
+
 ![](http://note.youdao.com/yws/public/resource/fd68ae4cb40d4207252220d4afc5e379/6568CD11D2414489A48CB1D028FA8925)
+
 3. 这里我用AndroidStudio新建一个工程
+
 ![](http://note.youdao.com/yws/public/resource/fd68ae4cb40d4207252220d4afc5e379/E108F8DE8D224A578E1002903AB5B164)
+
 4. 创建自己的数据库
+
 ```
 package com.kokozu.sqlitecipherdemo;
 import android.content.Context;
@@ -148,16 +160,22 @@ public class MainActivity extends Activity implements View.OnClickListener{
 ```
 这里稍微解释一下ReLinker，有时候我们使用第三方提供的动态库so文件，在APK打包时候会报UnsatisfiedLinkError错误，而ReLinker就是减少UnsatisfiedLinkError的错误率。
 5. 将上面生成的test.db文件导出用SQLite Expert Personal 3 工具打开，如图：
+
 ![](http://note.youdao.com/yws/public/resource/fd68ae4cb40d4207252220d4afc5e379/9E1DE39BEC024FCDACDA1542627A9D98)
+
 如果你的手机有root权限也可以使用Root Explorer查看，也是显示加密错误。
 提示:test.db在data/data/packagename/databases目录下
 既然可以加密那么也能够解密，下面讲讲SQLCipher如何解密
 
 ## SQLCipher解密篇
 上面讲了SQLCipher如何加密数据库文件，下面讲如果对加密后的数据库文件进行解密。同样需要我们在官网下载：https://github.com/sqlcipher/sqlcipher；这里下载的是sqlcipher的源码，源码下载下来后我们需要对它进行编译。
+
 1、	准备条件：Linux系统，这里我用CentOS 6.5，安装GCC编译器，sqlite数据库，以及上面提到的OpenSSL如果你的虚拟机上都已经装过了请跳过此步骤。那么怎么看有没有安装呢？通过rpm命令例如：rpm -qa|grep -l opensssl来查看openssl是否安装。下面我们开始讲解如何安装
+
 1）	安装GCC编译器：yum install gcc gcc-c++；这里通过yum源进行安装
+
 2）	安装sqlite数据库：
+
 下载地址：http://www.sqlite.org/download.html；
 tar zxvf sqlite-autoconf-3140200.tar.gz  //解压
 ./configure  //编译
@@ -165,12 +183,12 @@ make && make install  //安装
 3）	安装OpenSSL：yum -y install openssl-devel 
 2、	编译SQLCipher：将下载好的sqlcipher-maskter.zip复制到虚拟机上进行解压
 unzip -q sqlcipher-master.zip
-![](http://note.youdao.com/yws/public/resource/fd68ae4cb40d4207252220d4afc5e379/3CFBE6FD90084A6389B4E1AB7A19E26F)
+![](http://note.youdao.com/yws/public/resource/fd68ae4cb40d4207252220d4afc5e379/3A83355BDB4E4689B0FFBBAC73ACC0CD)
 进入sqlcipher-maskter文件内：cd sqlcipher-maskter，参考官方说明进行编译
 ![](http://note.youdao.com/yws/public/resource/fd68ae4cb40d4207252220d4afc5e379/B8D6B79D85F343C295442EFD2B14E99D)
 Crypto就是openssl提供的秘钥库，第一个采用静态链接，第二个采用动态链接，我使用的是第二种方式进行编译。
 3、	将加密的数据库复制到sqlcipher-maskter目录下，使用sqlcipher解密数据库文件
-![](http://note.youdao.com/yws/public/resource/fd68ae4cb40d4207252220d4afc5e379/DA966791D2094A2597F45575A63B6371)
+![](http://note.youdao.com/yws/public/resource/fd68ae4cb40d4207252220d4afc5e379/1FD694AC625349918E9D856E13832170)
 PRAGMA Key=’123456’输入加密的密码，通过PBKDF2键推导获取数据库的加密秘钥
 将test2.db复制到桌面用上面的SQLite Expert Personal 3工具打开，可以看到解密成功了。
 ![](http://note.youdao.com/yws/public/resource/fd68ae4cb40d4207252220d4afc5e379/8654BC29AC2A4415AB9900283ECC9075)
