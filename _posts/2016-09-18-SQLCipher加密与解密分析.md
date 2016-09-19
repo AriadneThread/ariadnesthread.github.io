@@ -159,6 +159,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
 }
 ```
 这里稍微解释一下ReLinker，有时候我们使用第三方提供的动态库so文件，在APK打包时候会报UnsatisfiedLinkError错误，而ReLinker就是减少UnsatisfiedLinkError的错误率。
+
 5、 将上面生成的test.db文件导出用SQLite Expert Personal 3 工具打开，如图：
 
 ![](http://note.youdao.com/yws/public/resource/fd68ae4cb40d4207252220d4afc5e379/9E1DE39BEC024FCDACDA1542627A9D98)
