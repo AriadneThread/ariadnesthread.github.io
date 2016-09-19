@@ -29,17 +29,17 @@ SQLCiper是一个在SQLite基础之上进行扩展的开源加密库，它占用
 ## SQLCipher加密篇
 SQLCipher使用很简单，上面说道它是在SQLite进行扩展的开源加密库，所以用法和SQLite是是一样的，只是需要注意import导入不同的包而已。
 
-1. 首先进入https://github.com/sqlcipher下载sqlcipher-android-tests，官方下载地址：https://github.com/sqlcipher/sqlcipher-android-tests；
+1、 首先进入https://github.com/sqlcipher下载sqlcipher-android-tests，官方下载地址：https://github.com/sqlcipher/sqlcipher-android-tests；
 
-2. 下载后的项目导入，并将libs下面的文件移植到你的项目中
+2、 下载后的项目导入，并将libs下面的文件移植到你的项目中
 
 ![](http://note.youdao.com/yws/public/resource/fd68ae4cb40d4207252220d4afc5e379/6568CD11D2414489A48CB1D028FA8925)
 
-3. 这里我用AndroidStudio新建一个工程
+3、 这里我用AndroidStudio新建一个工程
 
 ![](http://note.youdao.com/yws/public/resource/fd68ae4cb40d4207252220d4afc5e379/E108F8DE8D224A578E1002903AB5B164)
 
-4. 创建自己的数据库
+4、 创建自己的数据库
 
 ```
 package com.kokozu.sqlitecipherdemo;
@@ -159,7 +159,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
 }
 ```
 这里稍微解释一下ReLinker，有时候我们使用第三方提供的动态库so文件，在APK打包时候会报UnsatisfiedLinkError错误，而ReLinker就是减少UnsatisfiedLinkError的错误率。
-5. 将上面生成的test.db文件导出用SQLite Expert Personal 3 工具打开，如图：
+5、 将上面生成的test.db文件导出用SQLite Expert Personal 3 工具打开，如图：
 
 ![](http://note.youdao.com/yws/public/resource/fd68ae4cb40d4207252220d4afc5e379/9E1DE39BEC024FCDACDA1542627A9D98)
 
