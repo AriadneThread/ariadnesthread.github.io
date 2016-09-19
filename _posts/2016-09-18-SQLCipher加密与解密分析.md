@@ -177,20 +177,35 @@ public class MainActivity extends Activity implements View.OnClickListener{
 2）	安装sqlite数据库：
 
 下载地址：http://www.sqlite.org/download.html；
+
 tar zxvf sqlite-autoconf-3140200.tar.gz  //解压
+
 ./configure  //编译
+
 make && make install  //安装
+
 3）	安装OpenSSL：yum -y install openssl-devel 
+
 2、	编译SQLCipher：将下载好的sqlcipher-maskter.zip复制到虚拟机上进行解压
+
 unzip -q sqlcipher-master.zip
+
 ![](http://note.youdao.com/yws/public/resource/fd68ae4cb40d4207252220d4afc5e379/3A83355BDB4E4689B0FFBBAC73ACC0CD)
+
 进入sqlcipher-maskter文件内：cd sqlcipher-maskter，参考官方说明进行编译
+
 ![](http://note.youdao.com/yws/public/resource/fd68ae4cb40d4207252220d4afc5e379/B8D6B79D85F343C295442EFD2B14E99D)
+
 Crypto就是openssl提供的秘钥库，第一个采用静态链接，第二个采用动态链接，我使用的是第二种方式进行编译。
+
 3、	将加密的数据库复制到sqlcipher-maskter目录下，使用sqlcipher解密数据库文件
+
 ![](http://note.youdao.com/yws/public/resource/fd68ae4cb40d4207252220d4afc5e379/1FD694AC625349918E9D856E13832170)
+
 PRAGMA Key=’123456’输入加密的密码，通过PBKDF2键推导获取数据库的加密秘钥
 将test2.db复制到桌面用上面的SQLite Expert Personal 3工具打开，可以看到解密成功了。
+
 ![](http://note.youdao.com/yws/public/resource/fd68ae4cb40d4207252220d4afc5e379/8654BC29AC2A4415AB9900283ECC9075)
+
 ## 总结：
 在做加密解密的时候犯了两个低级错误，加密时创建项目引入so库的时候一直报UnsatisfiedLinkError错误，怎么也解决不了，后来发现是我的jniLibs目录不小心放错了。第二个问题就是解密的时候，在执行sqlcipher编译的时候总是失败，后来发现没有crypto,于是我安装了openssl-devel这样才编译通过，这个是没有仔细看官方说明导致的，以后要避免。
