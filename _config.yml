@@ -6,7 +6,7 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Ariadne Thread
+title: Ariadne's Thread
 # email: maokaiyin@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
 #  Write an awesome description for your new site here. You can edit this
@@ -17,9 +17,14 @@ baseurl: "" # the subpath of your site, e.g. /blog
 # twitter_username:
 github_username:  AriadneThread
 
+favicon: /assets/images/favicon.ico
+website: http://www.zhidianwuxian.cn
+company_name: 指点无限（北京）科技有限公司
+
 timezone: Asia/Shanghai
 
 # Build settings
 markdown: kramdown
+permalink: /:year/:month/:day/:title.html
 
 exclude: [vendor]
