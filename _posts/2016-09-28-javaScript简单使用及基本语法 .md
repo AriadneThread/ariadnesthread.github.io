@@ -6,7 +6,7 @@ author: 任智超
 categories: JavaScript
 ---
 
-#一.  javaScript基本语法汇总及其注意点
+# 一.  javaScript基本语法汇总及其注意点
 
 主篇涉及学习点：
 
@@ -16,17 +16,17 @@ categories: JavaScript
 
 3. js中数据类型详解
 
-# 1. javascript简单开场及其注意点
+## 1. javascript简单开场及其注意点
 
  
-# 1.1 创建一张HTML页面
+### 1.1 创建一张HTML页面
 对于 `JavaScript` 初学者,我们还是用比较普及和稳定的 xhtml1.x 来创建一张页面。
 
 很多时候,你无法记住 xhtml1.x 过渡性的标准格式。这个时候,建议打开 Dreamweaver 来获取。页面创建好后,编写一个最简单的 `JavaScript` 脚本(简称 JS 脚本)。
 
 注意网页的编码格式及文件存储的编码。 
 
-#1.2  `<script>`标签解析
+### 1.2  `<script>`标签解析
 `<script>`xxx`</script>`这组标签,是用于在 html 页面中插入 js 的主要方法。它主要有以下 几个属性:
 
 1.charset:可选。表示通过 src 属性指定的字符集。由于大多数浏览器忽略它,所以很 少有人用它。
@@ -45,7 +45,7 @@ categories: JavaScript
 
 ```
 
-#1.3 js代码嵌入的一些问题
+### 1.3 js代码嵌入的一些问题
 如果你想弹出一个`</script>`标签的字符串,那么浏览器会误解成 JS 代码已经结束了。 解决的方法,就是把字符串分成两个部分,通过连接符 ‘+’来连接。
 
 ```
@@ -90,14 +90,12 @@ alert('欢迎!');
 </noscript>
 ```
 
+## 2. 语法、关键保留字及变量详解
 
-
-# 2. 语法、关键保留字及变量详解
-
-#2.1 语法构成
+### 2.1 语法构成
 区分大小写`ECMAScript`中的一切,包括变量、函数名和操作符都是区分大小写的。例如: text 和 Text 表示两种不同的变量。
 
-#2.1.1 标识符
+#### 2.1.1 标识符
 所谓标识符 ,就是指变量 、函数、属性的名字 ,或者函数的参数 。标识符可以是下列格 式规则组合起来的一或多个字符:
 
 1.第一字符必须是一个字母、下划线 (_)或一个美元符号($)。 
@@ -106,7 +104,7 @@ alert('欢迎!');
 
 3.不能把关键字、保留字、 true、false 和 null 作为标识符。 例如:myName、book123 等
 
-#2.1.2 注释
+#### 2.1.2 注释
 
 `ECMAScript` 使用 C 风格的注释,包括单行注释和块级注释。 
 
@@ -121,7 +119,7 @@ alert('欢迎!');
 */
 ```
 
-#2.1.3 直接量(字面量 literal)
+#### 2.1.3 直接量(字面量 literal)
 ```
 所有直接量 (字面量),就是程序中直接显示出来的数据值。 100 //数字字面量
 '任智超' //字符串字面量
@@ -135,9 +133,9 @@ null //对象字面量
 ```
 
 
-#2.2 关键字和保留字
+### 2.2 关键字和保留字
 
-#2.2.1 ECMAScript中全部关键字
+#### 2.2.1 ECMAScript中全部关键字
 
 一般用于控制语句的开始或结束 , 或者用于执行特定的操作等。关键字也是语言保留的,不能用作标识符。
 
@@ -169,9 +167,8 @@ instanceof
 typeof
 ```
 
+#### 2.2.2 ECMAScript中全部保留字
 
-
-#2.2.2 ECMAScript中全部保留字
 一组不能用作标识符的保留字。
 
 ```
@@ -269,10 +266,10 @@ height;
 ```
 
 
-# 4 javascript中的数据类型汇总
+## 4 javascript中的数据类型汇总
 `ECMAScript` 中有 5 种简单数据类型:`Undefined`、`Null`、`Boolean`、`Number` 和 `String`。 还有一种复杂数据类型——`Object`。`ECMAScript` 不支持任何创建自定义类型的机制,所有 值都成为以上 6 中数据类型之一。
 
-#4.1 typeof运算符
+### 4.1 typeof运算符
 
 `typeof` 操作符是用来检测变量的数据类型 。对于值或变量使用 `typeof `操作符会返回如下:
 
@@ -293,7 +290,7 @@ alert(typeof '任智超');
 
 PS:函数在 ECMAScript 中是对象,不是一种数据类型。 所以,使用 `typeof `来区分` function` 和 `object` 是非常有必要的。
 
-#4.2 Undefined 类型 
+### 4.2 Undefined 类型 
 
 `Undefined` 类型只有一个值,即特殊的 `undefined`。在使用 var 声明变量,但没有对其初 始化时,这个变量的值就是 `undefined`。
 
@@ -315,7 +312,7 @@ PS:如果 `typeof box`,`typeof age` 都返回的 `undefined`。
 
 从逻辑上思考,他们的值,一个 是 `undefined`,一个`报错`;他们的类型,`却都是 undefined`。所以,我们在定义变量的时候, `尽可能的不要只声明,不赋值`。
 
-#4.3 Null类型
+### 4.3 Null类型
 `Null` 类型是一个只有一个值的数据类型,即特殊的值 `null`。它表示一个空对象引用(指 针),而 `typeof` 操作符检测 `null` 会返回 `object`。
 
 ```
@@ -349,7 +346,7 @@ var car = null;
 alert(typeof box == typeof car)
 ```
 
-#4.4 Boolean类型
+### 4.4 Boolean类型
 `Boolean 类型有两个值(字面量):true 和 false。`而 `true` 不一定等于 1,`false` 不一定等于 0。
 JavaScript 是区分大小写的,True 和 False 或者其他都不是 Boolean 类型的值。
  
@@ -391,7 +388,7 @@ Object    任何对象                   null
 Undefined                           undefined
 ```
 
-#4.5 Number类型
+### 4.5 Number类型
 
 `Number` 类型包含两种数值:整型和浮点型。为了支持各种数值类型, ECMA-262 定义
 了不同的数值字面量格式。
@@ -522,9 +519,6 @@ alert(Number(null));  //0,空对象返回 0
 alert(Number(undefined));  //NaN,undefined 返回 NaN
 ```
 
-
-
-
 如果是字符串,应该遵循一下规则:
 
 1.只包含数值的字符串,会直接转成成十进制数值,如果包含前导 0,即自动去掉。 
@@ -596,7 +590,7 @@ alert(parseFloat('1.234e7'));       //12340000,把科学技术法转成普通数
 ```
 
 
-#4.6 String类型
+### 4.6 String类型
 
 `String` 类型用于表示由于零或多个16位Unicode 字符组成的`字符序列`,即字符串。字符串可以由双引号(")或单引号(')表示。
 
@@ -664,7 +658,7 @@ alert(String(box));
 PS:如果值有 toString()方法,则调用该方法并返回相应的结果; 如果是 null 或者 undefined, `则返回"null"或者"undeinfed"`
 
 
-#4.7 Object 类型
+### 4.7 Object 类型
 
 ECMAScript 中的对象其实就是一组数据和功能的集合 。对象可以通过执行 `new `操作符 后跟要创建的对象类型的名称来创建。
 
@@ -697,5 +691,4 @@ alert(typeof box); //Object 类型
 PS:面向对象是 JavaScript 课程的重点,这里我们只是简单做个介绍 。详细的课程将在 以后的章节继续学习。
 
 
-
-未完待续......,更多高级教程后续更新。
+未完待续......更多高级教程后续更新。
