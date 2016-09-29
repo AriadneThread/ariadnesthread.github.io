@@ -1,20 +1,39 @@
-%%:uuid=160918165508002
+---
+layout: post
+title:  "构建Jenkins+git+Gradle+fir自动化集成环境"
+date:   2016-09-29 13:34:50
+author: Darre
+categories: jekyll
+---
 ## 背景：
 随着业务的需要，版本迭代更新越来越频繁，而最麻烦的是手动打包给测试人员，让他们进行测试，这样既消耗时间，又影响效率。于是根据这一痛点，开始搭建一个自动化集成环境。首先简单介绍一下集成环境的构成：
+
 Jenkins：是一个开源软件项目，旨在提供一个开放易用的软件平台。它是基于Java开发的一种持续集成工具，用于监控持续重复的工作。（来源百度百科）
+
 Git：是一款免费、开源的分布式版本管理系统，用于管理任何大小的项目
+
 Gradle：自动化构建工具
+
 Fir：是一个第三方免费应用内测托管平台
+
 ## 前期准备：
+
 1、	搭建Jenkins环境；
+
 2、	Jenkins环境搭建好后安装插件：Git plugin，Gradle plugin，Android Lint Plugin，fir plugin
+
 搭建Jenkins环境：
+
 （1）	下载Jenkins.war包 地址：https://jenkins.io/index.html
+
 （2）	在存放的目录下例如：F:\soft\jenkins 执行java -jar jenkins.war （得安装Java环境）
+
 （3）	打开浏览器运行http://localhost:8080，即可打开Jenkins页面
 
 插件下载：
+
 （1）	左侧找到“系统管理”=》“管理插件”=》“可选插件”选中要安装的插件后点击“直接安装”直到安装完成；
+
 （2）	在“管理插件”中的“已安装”中可以查看是否已经安装
 
 ## 搭建集成环境：
