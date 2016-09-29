@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "1. javaScript基本语法汇总及其注意点"
-date:   2016-08-28 20:39:00
+date:   2016-09-28 20:39:00
 author: 任智超
 categories: JavaScript
 ---
