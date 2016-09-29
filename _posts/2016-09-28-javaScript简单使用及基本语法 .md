@@ -1,24 +1,12 @@
 ---
 layout: post
-title:  "javaScript基本语法汇总及其注意点"
+title:  "1. javaScript基本语法汇总及其注意点"
 date:   2016-08-28 20:39:00
 author: 任智超
 categories: JavaScript
 ---
 
 #一.  javaScript基本语法汇总及其注意点
-
----
-标题:   "javaScript基本语法汇总及其注意点"
-
-日期:   2016-08-28 20:39:00
-
-作者:   任智超
-
-类别:   前端-javaScript
-
----
-
 
 主篇涉及学习点：
 
