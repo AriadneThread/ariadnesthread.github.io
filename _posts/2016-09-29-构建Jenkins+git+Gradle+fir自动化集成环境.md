@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "构建Jenkins+git+Gradle+fir自动化集成环境"
-date:   2016-09-29 13:34:50
+date:   2016-09-29 13:34:50 +0800
 author: Darre
 categories: jekyll
 ---
@@ -90,4 +90,3 @@ Fir：是一个第三方免费应用内测托管平台
 ### 参考文章：
 http://blog.csdn.net/xiaoyaosheng86/article/details/50855719
 http://www.mobibrw.com/2016/3695
-
