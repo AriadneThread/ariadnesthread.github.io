@@ -4,7 +4,7 @@ title:  "Jekyll Setup"
 date:   2016-08-22 13:47:04 +0800
 author: maokaiyin
 
-categories: jekyll
+categories: Jekyll
 ---
 
 ### [Requirements](https://jekyllrb.com/docs/installation/)
