@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "2. javaScript基本语法进阶"
+title:  "2. JavaScript基本语法进阶"
 date:   2016-09-29 11:39:00 +0800
 author: 任智超
 categories: JavaScript
 ---
 
-## 二. javaScript基本语法进阶
+## 二. JavaScript基本语法进阶
 
 主篇涉及学习点：
 
