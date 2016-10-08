@@ -1,16 +1,13 @@
 ---
 layout: post
-title:  "1. JavaScript基本语法汇总及其注意点"
+title:  "一、JavaScript基本语法汇总及其注意点"
 date:   2016-09-28 20:39:00 +0800
 author: 任智超
 categories: JavaScript
 ---
+本篇涉及学习点：
 
-## 一. JavaScript基本语法汇总及其注意点
-
-主篇涉及学习点：
-
-1. js简单使用
+1. js的简单使用
 2. 简单语法、关键字以及保留字
 3. js中数据类型详解
 

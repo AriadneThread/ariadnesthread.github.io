@@ -1,14 +1,11 @@
 ---
 layout: post
-title:  "2. JavaScript基本语法进阶"
+title:  "二、JavaScript基本语法进阶"
 date:   2016-09-29 11:39:00 +0800
 author: 任智超
 categories: JavaScript
 ---
-
-## 二. JavaScript基本语法进阶
-
-主篇涉及学习点：
+本篇涉及学习点：
 
 1. 运算符
 2. 流程控制
