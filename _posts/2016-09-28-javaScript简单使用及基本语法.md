@@ -2,7 +2,7 @@
 layout: post
 title:  "一、JavaScript基本语法汇总及其注意点"
 date:   2016-09-28 20:39:00 +0800
-author: 任智超
+author: The actor
 categories: JavaScript
 ---
 本篇涉及学习点：
