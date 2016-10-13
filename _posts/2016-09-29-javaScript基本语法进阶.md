@@ -1,10 +1,12 @@
 ---
+title: 二、JavaScript基本语法进阶
+date: 2016-09-29 11:39:00 +08:00
+categories:
+- JavaScript
 layout: post
-title:  "二、JavaScript基本语法进阶"
-date:   2016-09-29 11:39:00 +0800
 author: The actor
-categories: JavaScript
 ---
+
 本篇涉及学习点：
 
 1. 运算符

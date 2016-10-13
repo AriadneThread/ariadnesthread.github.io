@@ -1,10 +1,12 @@
 ---
+title: 发布Android的GitHub开源项目到JitPack
+date: 2016-10-08 11:09:14 +08:00
+categories:
+- Android
 layout: post
-title:  "发布Android的GitHub开源项目到JitPack"
-date:   2016-10-08 11:09:14 +0800
 author: wuzhen
-categories: Android
 ---
+
 之前使用 JCenter 发布了一个 GitHub 开源项目，感觉整个流程很麻烦，而且 JCenter 经常连不上，所以最近几个项目都是发布到了 JitPack。
 
 ## 什么是JitPack

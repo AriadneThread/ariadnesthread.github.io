@@ -1,10 +1,12 @@
 ---
+title: SQLCipher加密与解密分析
+date: 2016-09-18 23:47:50 +08:00
+categories:
+- Android
 layout: post
-title:  "SQLCipher加密与解密分析"
-date:   2016-09-18 15:47:50
 author: Darre
-categories: [Android]
 ---
+
 ## 前言
 
 我们知道Android系统有一个内嵌的SQLite数据库，它经常被用来存储一些Server端的数据，其中也会包含一些敏感的信息，为了保证信息的安全性，我们需要对数据进行加密，通常的做法是直接通过MD5对数据进行加密。但是数据量一旦过大开销就消耗过大，性能上就需要得到提升。这里推荐使用SQLCipher来解决数据库加密问题。它是一个第三方加密开源库。

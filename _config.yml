@@ -1,30 +1,20 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
+---
 title: Ariadne's Thread
-# email: maokaiyin@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-#  Write an awesome description for your new site here. You can edit this
-#  line in _config.yml. It will appear in your document head meta (for
-#  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-# url: "http://yourdomain.com" # the base hostname & protocol for your site
-# twitter_username:
-github_username:  AriadneThread
-
-favicon: /assets/images/favicon.ico
+timezone: Asia/Shanghai
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+description: ''
+baseurl: ''
+github_username: AriadneThread
+favicon: "/assets/images/favicon.ico"
 website: http://www.zhidianwuxian.cn
 company_name: 指点无限（北京）科技有限公司
-
-timezone: Asia/Shanghai
-
-# Build settings
 markdown: kramdown
-permalink: /:year/:month/:day/:title.html
-
-exclude: [vendor]
+permalink: "/:year/:month/:day/:title.html"
+exclude:
+- vendor
