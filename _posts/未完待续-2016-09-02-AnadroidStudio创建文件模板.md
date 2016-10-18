@@ -1,9 +1,10 @@
 ---
+title: AndroidStudio创建文件模板
 layout: post
-title:  "AndroidStudio创建文件模板"
 author: wuzhen
 categories: Android
-tags: [Android]
+tags:
+- Android
 ---
 
 **开发环境：Mac OS、Android Studio 2.1.2**

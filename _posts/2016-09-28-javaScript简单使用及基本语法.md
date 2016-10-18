@@ -1,10 +1,12 @@
 ---
+title: 一、JavaScript基本语法汇总及其注意点
+date: 2016-09-28 20:39:00 +08:00
+categories:
+- JavaScript
 layout: post
-title:  "一、JavaScript基本语法汇总及其注意点"
-date:   2016-09-28 20:39:00 +0800
 author: The actor
-categories: JavaScript
 ---
+
 本篇涉及学习点：
 
 1. js的简单使用

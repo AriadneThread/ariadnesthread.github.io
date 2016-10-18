@@ -1,10 +1,13 @@
 ---
+title: 构建Jenkins+Git+Gradle+fir自动化集成环境
+date: 2016-09-29 13:34:50 +08:00
+categories:
+- Android
+- Jenkins
 layout: post
-title:  "构建Jenkins+Git+Gradle+fir自动化集成环境"
-date:   2016-09-29 13:34:50 +0800
 author: Darre
-categories: [Android, Jenkins]
 ---
+
 ## 背景：
 
 随着业务的需要，版本迭代更新越来越频繁，而最麻烦的是手动打包给测试人员，让他们进行测试，这样既消耗时间，又影响效率。于是根据这一痛点，开始搭建一个自动化集成环境。首先简单介绍一下集成环境的构成：
