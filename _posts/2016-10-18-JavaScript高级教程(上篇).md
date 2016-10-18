@@ -1,9 +1,10 @@
 ---
+title: JavaScript高级教程(上篇)
+date: 2016-10-18 13:30:00 +08:00
+categories:
+- JavaScript
 layout: post
-title:  "JavaScript高级教程(上篇)"
-date:   2016-10-18 13:30:00 +0800
 author: The actor
-categories: JavaScript
 ---
 
 # 三. javaScript高级教程(上篇)
