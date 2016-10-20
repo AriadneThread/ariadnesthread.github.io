@@ -7,7 +7,7 @@ layout: post
 author: The actor
 ---
 
-本篇涉及学习点：
+**本篇涉及学习点：**
 
 1. 运算符
 2. 流程控制
