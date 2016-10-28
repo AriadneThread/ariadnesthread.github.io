@@ -7,6 +7,8 @@ layout: post
 author: maokaiyin
 ---
 
+这篇文章将会介绍如何设置Jekyll环境
+
 ### [Requirements](https://jekyllrb.com/docs/installation/)
 
 * Linux, Unix, or Mac OS X
