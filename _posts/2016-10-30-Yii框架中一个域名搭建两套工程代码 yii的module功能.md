@@ -1,11 +1,12 @@
 ---
+title: Yii框架中一个域名搭建两套工程代码 yii的module功能
+date: 2016-10-30 22:55:00 +08:00
+categories:
+- php
+- yii框架
 layout: post
-title:  "Yii框架中一个域名搭建两套工程代码 yii的module功能"
-date:   2016-10-30 14:55:00
 author: 张瑞峰
-categories: php yii框架
 ---
-
 
 Yii框架中一个域名搭建两套工程代码，代码结构如下：
 
