@@ -30,7 +30,8 @@ Yii框架中一个域名搭建两套工程代码，代码结构如下：
 
 到此，已经配置成功，访问m.komovie.cn走的是yii默认的框架代码，访问m.komovie.cn/m/访问的是刚才配置的module/m里面的代码了，不过有时候某些路径还是回报502，需要在yii的配置文件的配置protected/config/product.php，代码如下
 
-···
+...
+
         'urlManager'=>array(
             'urlFormat'=>'path',
             'rules'=>array(
@@ -39,7 +40,8 @@ Yii框架中一个域名搭建两套工程代码，代码结构如下：
                 'm/<controller:index>/<action:view>/<aid:\d+>'=>'m/index/view',
             ),
         ),
-···
+
+...
 
 
 
