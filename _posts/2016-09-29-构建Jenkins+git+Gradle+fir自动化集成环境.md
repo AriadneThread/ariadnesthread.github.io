@@ -8,7 +8,7 @@ layout: post
 author: Darre
 ---
 
-## 背景：
+## 背景
 
 随着业务的需要，版本迭代更新越来越频繁，而最麻烦的是手动打包给测试人员，让他们进行测试，这样既消耗时间，又影响效率。于是根据这一痛点，开始搭建一个自动化集成环境。首先简单介绍一下集成环境的构成：
 
@@ -20,7 +20,7 @@ Gradle：自动化构建工具
 
 Fir：是一个第三方免费应用内测托管平台
 
-## 前期准备：
+## 前期准备
 
 1\. 搭建Jenkins环境：
 
@@ -36,41 +36,41 @@ Fir：是一个第三方免费应用内测托管平台
 
  （2）在“管理插件”中的“已安装”中可以查看是否已经安装
 
-## 搭建集成环境：
+## 搭建集成环境
 
 1\. 进入Jenkins，点击左侧“系统管理”
 
-![](http://note.youdao.com/yws/public/resource/fd68ae4cb40d4207252220d4afc5e379/372FD23CEF2F49E796E5A7EB310B61B9)
+![系统管理]({{ site.baseurl }}/assets/posts/2016-09-29-系统管理.jpg)
 
-2\. 进入“系统管理”，点击右侧栏“Global Tool Configuration”
+2\. 进入“系统管理”，点击右侧栏 “Global Tool Configuration”
 
-![](http://note.youdao.com/yws/public/resource/fd68ae4cb40d4207252220d4afc5e379/01B47B0EFD0C4C2FA8A309BD37D9C06B)
+![Global Tool Configuration]({{ site.baseurl }}/assets/posts/2016-09-29-global-tool-configuration.jpg)
 
-3\. 进入“Global Tool Configuration”配置JDK，Git，Gradle
+3\. 进入 “Global Tool Configuration” 配置JDK、Git、Gradle
 
-![](http://note.youdao.com/yws/public/resource/fd68ae4cb40d4207252220d4afc5e379/63F76CA014804BFBB7A0BD81F9387590)
+![配置]({{ site.baseurl }}/assets/posts/2016-09-29-配置.jpg)
 
 4\. 回到面板点击“新建”项目
 
-![](http://note.youdao.com/yws/public/resource/fd68ae4cb40d4207252220d4afc5e379/22CCFDCF5E3D44DCABAE90CFC94E810E)
+![新建项目]({{ site.baseurl }}/assets/posts/2016-09-29-新建项目.jpg)
 
-5\. 点击“配置”
+5\. 点击“配置”，配置项目的源码
 
-![](http://note.youdao.com/yws/public/resource/fd68ae4cb40d4207252220d4afc5e379/BF5825B5E4AB42CBB80C0CC604F206E7)
+![新建项目配置]({{ site.baseurl }}/assets/posts/2016-09-29-新建项目配置.jpg)
 
-点击Gredentials后面的“Add”填写Git的用户名密码
+点击 Credentials 后面的 “Add” 填写 Git 的用户名密码
 
-6\. 构建触发器选中“Poll SCM”
+6\. 构建触发器选中 “Poll SCM”
 
-![](http://note.youdao.com/yws/public/resource/fd68ae4cb40d4207252220d4afc5e379/C9F27A4917BA4C1D92A7B40181B26FF7)
+![poll SCM]({{ site.baseurl }}/assets/posts/2016-09-29-poll-SCM.jpg)
 
 7\. 点击“增加构建步骤”选择“Invoke Gradle Script”安装Gradle plugin后才会有
 
-![](http://note.youdao.com/yws/public/resource/fd68ae4cb40d4207252220d4afc5e379/939CB6F777914BB38F0E6E77909650AC)
+![构建步骤]({{ site.baseurl }}/assets/posts/2016-09-29-构建步骤.jpg)
 
 8\. 点击“增加构建后操作步骤”选择“public android lint results”、“Archive the artifacts”
 
-![](http://note.youdao.com/yws/public/resource/fd68ae4cb40d4207252220d4afc5e379/199723EF3CEF42C69F90B85FA930B671)
+![lint]({{ site.baseurl }}/assets/posts/2016-09-29-lint.jpg)
 
 9\. 下载fir plugin插件：[fir-plugin-0629.hpi](http://7xju1s.com1.z0.glb.clouddn.com/fir-plugin-0629.hpi)
 
@@ -78,19 +78,19 @@ Fir：是一个第三方免费应用内测托管平台
 
 11\. 回构建的项目中，点击“配置” -> “增加构建后操作步骤” -> “Upload to fir.im”
 
-![](http://note.youdao.com/yws/public/resource/fd68ae4cb40d4207252220d4afc5e379/6D867DFD595B4F58975BC59C31B7783F)
+![Upload to fir.im]({{ site.baseurl }}/assets/posts/2016-09-29-fir.jpg)
 
 具体步骤参照：[http://blog.fir.im/jenkins](http://blog.fir.im/jenkins/)
 
-12\. 配置完成后点击“Apply”,“保存”，返回到项目首页点击“立即构建”即可。构建成功后日志显示：
+12\. 配置完成后点击“Apply”,“保存”，返回到项目首页点击“立即构建”即可。
 
-![](http://note.youdao.com/yws/public/resource/fd68ae4cb40d4207252220d4afc5e379/1208338E9E0F4BAFBEFA76B1ABCF24D5)
+构建成功后日志显示如下：
 
-13\. 打开[fir.im](http://fir.im)，进入到我的应用，即可看到上传结果
+![Log]({{ site.baseurl }}/assets/posts/2016-09-29-log.jpg)
 
-![](http://note.youdao.com/yws/public/resource/fd68ae4cb40d4207252220d4afc5e379/F5E1F52FE2F14570902C1C3EC9549B6D)
+13\. 打开 [fir.im](http://fir.im)，进入到我的应用，即可看到上传结果
 
-## 参考文章：
+## 参考
 
 1. [亲自实践Jenkins+Git+Gradle自动化构建Android应用](http://blog.csdn.net/xiaoyaosheng86/article/details/50855719)
 2. [Windows下搭建基于Jenkins+Git+Gradle的Android持续集成](http://www.mobibrw.com/2016/3695)

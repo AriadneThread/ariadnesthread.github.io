@@ -13,9 +13,19 @@ author: Darre
 
 SQLCiper是一个在SQLite基础之上进行扩展的开源加密库，它占用面积小，性能高，因此比较适合嵌入式应用中。SQLCipher主要对数据库文件进行加密。
 
-优点：
+**Features：**
 
-![](http://note.youdao.com/yws/public/resource/fd68ae4cb40d4207252220d4afc5e379/AC336F1A1A864D6E92AFDE2043ABB890)
+> Fast performance with as little as 5-15% overhead for encryption on many operations
+>
+> 100% of data in the database file is encrypted
+>
+> Good security practices (CBC mode, key derivation)
+>
+> Zero-configuration and application level cryptography
+>
+> Algorithms provided by the peer reviewed OpenSSL crypto library.
+>
+> Configurable crypto providers
 
 上面是官方的解释，简单的总结一下：
 
@@ -35,11 +45,11 @@ SQLCipher使用很简单，上面说道它是在SQLite进行扩展的开源加�
 
 2、 下载后的项目导入，并将libs下面的文件移植到你的项目中
 
-![](http://note.youdao.com/yws/public/resource/fd68ae4cb40d4207252220d4afc5e379/6568CD11D2414489A48CB1D028FA8925)
+![sqlcipher-android-tests]({{ site.baseurl }}/assets/posts/2016-09-18-sqlcipher-android-tests.png)
 
 3、 这里我用AndroidStudio新建一个工程
 
-![](http://note.youdao.com/yws/public/resource/fd68ae4cb40d4207252220d4afc5e379/E108F8DE8D224A578E1002903AB5B164)
+![Android Studio项目]({{ site.baseurl }}/assets/posts/2016-09-18-android_studio.png)
 
 4、 创建自己的数据库
 
@@ -176,7 +186,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
 
 5、 将上面生成的test.db文件导出用SQLite Expert Personal 3 工具打开，如图：
 
-![](http://note.youdao.com/yws/public/resource/fd68ae4cb40d4207252220d4afc5e379/9E1DE39BEC024FCDACDA1542627A9D98)
+![Encrypt]({{ site.baseurl }}/assets/posts/2016-09-18-encrypt.png)
 
 如果你的手机有root权限也可以使用Root Explorer查看，也是显示加密错误。
 提示:test.db在data/data/packagename/databases目录下
@@ -186,9 +196,11 @@ public class MainActivity extends Activity implements View.OnClickListener{
 
 上面讲了SQLCipher如何加密数据库文件，下面讲如果对加密后的数据库文件进行解密。同样需要我们在官网下载：[https://github.com/sqlcipher/sqlcipher](https://github.com/sqlcipher/sqlcipher)；这里下载的是sqlcipher的源码，源码下载下来后我们需要对它进行编译。
 
-1、准备条件：Linux系统，这里我用CentOS 6.5，安装GCC编译器，sqlite数据库，以及上面提到的OpenSSL如果你的虚拟机上都已经装过了请跳过此步骤。那么怎么看有没有安装呢？通过rpm命令例如：`rpm -qa|grep -l opensssl`来查看openssl是否安装。
+### 1. 安装环境
 
-下面我们开始讲解如何安装
+Linux系统，这里我用CentOS 6.5，安装GCC编译器，sqlite数据库，以及上面提到的OpenSSL如果你的虚拟机上都已经装过了请跳过此步骤。那么怎么看有没有安装呢？通过rpm命令例如：`rpm -qa|grep -l opensssl`来查看openssl是否安装。
+
+下面我们开始讲解如何安装：
 
 1）安装GCC编译器，这里通过yum源进行安装：
 
@@ -196,7 +208,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
 yum install gcc gcc-c++；
 ```
 
-2）安装sqlite数据库：
+2）安装SQLite数据库：
 
 下载地址：[http://www.sqlite.org/download.html](http://www.sqlite.org/download.html)
 
@@ -212,28 +224,32 @@ make && make install #安装
 yum -y install openssl-devel
 ```
 
-2、编译SQLCipher：将下载好的sqlcipher-maskter.zip复制到虚拟机上进行解压
+### 2. 编译SQLCipher
+
+将下载好的 sqlcipher-maskter.zip 复制到虚拟机上进行解压
 
 ```
 unzip -q sqlcipher-master.zip
 ```
 
-![](http://note.youdao.com/yws/public/resource/fd68ae4cb40d4207252220d4afc5e379/3A83355BDB4E4689B0FFBBAC73ACC0CD)
+![unzip sqlcipher-master.zip]({{ site.baseurl }}/assets/posts/2016-09-18-ls.png)
 
-进入sqlcipher-maskter文件内：cd sqlcipher-maskter，参考官方说明进行编译
+进入sqlcipher-maskter文件内：`cd sqlcipher-maskter`，参考官方说明进行编译：
 
-![](http://note.youdao.com/yws/public/resource/fd68ae4cb40d4207252220d4afc5e379/B8D6B79D85F343C295442EFD2B14E99D)
+![Compiling]({{ site.baseurl }}/assets/posts/2016-09-18-compiling.png)
 
 Crypto就是openssl提供的秘钥库，第一个采用静态链接，第二个采用动态链接，我使用的是第二种方式进行编译。
 
-3、将加密的数据库复制到sqlcipher-maskter目录下，使用sqlcipher解密数据库文件
+### 3. 解密数据库文件
 
-![](http://note.youdao.com/yws/public/resource/fd68ae4cb40d4207252220d4afc5e379/1FD694AC625349918E9D856E13832170)
+将加密的数据库复制到sqlcipher-maskter目录下，使用sqlcipher解密数据库文件
+
+![解密]({{ site.baseurl }}/assets/posts/2016-09-18-解密.png)
 
 `PRAGMA Key='123456'`输入加密的密码，通过PBKDF2键推导获取数据库的加密秘钥
 将test2.db复制到桌面用上面的SQLite Expert Personal 3工具打开，可以看到解密成功了。
 
-![](http://note.youdao.com/yws/public/resource/fd68ae4cb40d4207252220d4afc5e379/8654BC29AC2A4415AB9900283ECC9075)
+![解密后打开]({{ site.baseurl }}/assets/posts/2016-09-18-解密后打开.png)
 
 ## 总结
 
