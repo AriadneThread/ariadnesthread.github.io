@@ -1,9 +1,10 @@
 ---
+title: Android MVP介绍与实现
+date: 2016-11-11 21:47:50 +08:00
+categories:
+- jekyll
 layout: post
-title:  "Android MVP介绍与实现"
-date:   2016-11-11 13:47:50
 author: Darre
-categories: jekyll
 ---
 
 ##描述：
