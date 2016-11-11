@@ -45,6 +45,7 @@ MVP模式是什么？MVP是从经典的模式MVC演变而来的，它们的基�
 ![](https://github.com/AriadneThread/ariadnethread.github.io/blob/master/assets/posts/2016-11-11-mvp_demo.png) 
  
 1、	Model层：处理和数据相关的一些简单操作
+
 ```
 /**
  * Created by hao on 2016/11/2.
@@ -127,6 +128,7 @@ public class RequestTool<T> implements RequestInterface {
 这里有两个接口：一个是请求方法的接口，一个是请求回调成功失败接口，这里模拟了一下登录请求访问。所以，在这里开启了一个子线程，让它休眠2秒。
 
 2、	View：通过定义一个接口来和Presenter进行交换，这个接口主要是对视图进行操作。
+
 ```
 /**
  * Created by hao on 2016/11/2.
@@ -234,6 +236,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 这个时候Activity只负责处理View相关的工作。
 
 3、	Presenter：处理界面逻辑和数据模型
+
 ```
 /**
  * Created by hao on 2016/11/2.
