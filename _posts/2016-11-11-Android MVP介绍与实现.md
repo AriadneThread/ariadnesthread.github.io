@@ -18,7 +18,7 @@ MVP模式是什么？MVP是从经典的模式MVC演变而来的，它们的基�
 
 ## MVP与MVC模型结构如图：
  
-![](https://github.com/AriadneThread/ariadnethread.github.io/blob/master/assets/posts/2016-11-11-mvc_mvp.png)
+![](https://raw.githubusercontent.com/AriadneThread/ariadnethread.github.io/master/assets/posts/2016-11-11-mvc_mvp.png)
 
 ## MVC 模型结构：
 
@@ -36,13 +36,13 @@ MVP模式是什么？MVP是从经典的模式MVC演变而来的，它们的基�
 谷歌给了我们一个MVP模式实战例子，它是一个类似记事本的app，源码地址：https://github.com/googlesamples/android-architecture
 官方案例的框架图如下：
  
-![](https://github.com/AriadneThread/ariadnethread.github.io/blob/master/assets/posts/2016-11-11-mvp.png) 
+![](https://raw.githubusercontent.com/AriadneThread/ariadnethread.github.io/master/assets/posts/2016-11-11-mvp.png) 
  
 ## 实战：
 
 下面用MVP模式写一个的简单的登录功能。目录结构如图：
 
-![](https://github.com/AriadneThread/ariadnethread.github.io/blob/master/assets/posts/2016-11-11-mvp_demo.png) 
+![](https://raw.githubusercontent.com/AriadneThread/ariadnethread.github.io/master/assets/posts/2016-11-11-mvp_demo.png) 
  
 1、	Model层：处理和数据相关的一些简单操作
 
