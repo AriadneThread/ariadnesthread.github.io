@@ -19,7 +19,7 @@ author: maokaiyin
 
 或使用Ruby version manager安装
 
-* rbenv (推荐)
+* [rbenv](https://github.com/rbenv/rbenv) (推荐)
 * rvm
 
 安装2.0以上Ruby，最新版本为佳。
@@ -86,3 +86,4 @@ Configuration file: /blog/_config.yml
 ```
 
 浏览器访问[http://127.0.0.1:4000/](http://127.0.0.1:4000/)预览
+[](``)
