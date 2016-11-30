@@ -6,6 +6,7 @@ categories:
 layout: post
 author: wuzhen
 ---
+
 > **需求：**横向滚动的列表，操作类似 Gallery，选中的 Item 居中且放大显示，UI 效果如下图：
 ![UI效果示例.jpg](http://upload-images.jianshu.io/upload_images/1320493-3929dd01896887fc.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
