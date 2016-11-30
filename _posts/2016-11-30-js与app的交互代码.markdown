@@ -1,9 +1,10 @@
 ---
-title:  "js与app交互"
-date:   2016-11-30 14:55:00
+title: js与app交互
+date: 2016-11-30 22:55:00 +08:00
+categories:
+- js
 author: 张瑞峰
 layout: post
-categories: js
 ---
 
 ```
