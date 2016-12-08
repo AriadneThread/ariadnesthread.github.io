@@ -1,3 +1,8 @@
+---
+title: Android基于javacv环境编译ffmpeg
+date: 2016-12-08 00:00:00 +08:00
+---
+
 
 ---
 layout: post
