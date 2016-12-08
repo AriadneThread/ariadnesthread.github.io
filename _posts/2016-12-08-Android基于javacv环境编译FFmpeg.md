@@ -14,10 +14,15 @@ author: Darre
 ## 环境及准备工作：
 
 1、	Linux系统（我用的是cent os虚拟机）
+
 2、	安装yasm-1.3.0.tar.gz
+
 3、	Last_stable_x264.tar.bz2
+
 4、	Ffmpeg-2.1.1.tar.bz2
+
 5、	Android-ndk-r10b
+
 6、	FFmpeg-2.1.1-android-arm.patch（javacv提供的修补文件）
 
 ## 步骤：
