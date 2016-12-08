@@ -1,13 +1,7 @@
 ---
+layout: post
 title: Android基于javacv环境编译ffmpeg
 date: 2016-12-08 00:00:00 +08:00
----
-
-
----
-layout: post
-title:  "Android 在javacv环境下编译FFmpeg"
-date:   2016-12-08 14:20:50
 author: Darre
 categories: jekyll
 ---
