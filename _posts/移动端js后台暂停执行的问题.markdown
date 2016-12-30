@@ -1,9 +1,8 @@
 ---
+title: 移动端js倒计时问题
+date: 2016-12-30 00:00:00 +08:00
 layout: post
-title:  "移动端js倒计时问题"
-date:   2016-12-30 
 author: 张瑞峰
-
 categories: html5
 ---
 
