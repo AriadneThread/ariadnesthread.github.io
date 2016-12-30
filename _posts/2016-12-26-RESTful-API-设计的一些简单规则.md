@@ -1,6 +1,8 @@
 ---
 title: RESTful API 设计的一些简单规则
 date: 2016-12-26 11:16:13
+layout: post
+author: maokaiyin
 tags: RESTful
 ---
 
