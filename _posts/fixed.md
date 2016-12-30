@@ -1,9 +1,8 @@
 ---
+title: Web移动端Fixed布局的解决方案
+date: 2016-12-30 00:00:00 +08:00
 layout: post
-title:  "Web移动端Fixed布局的解决方案"
-date:   2016-12-30 
 author: 金丽新
-
 categories: html5
 ---
 
