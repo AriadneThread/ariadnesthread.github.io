@@ -1,9 +1,10 @@
 ---
 title: RESTful API 设计的一些简单规则
-date: 2016-12-26 11:16:13
+date: 2016-12-26 19:16:13 +08:00
+tags:
+- RESTful
 layout: post
 author: maokaiyin
-tags: RESTful
 ---
 
 这里我收集了一些约定（原则），用来帮助更好地使用 RESTful API。
