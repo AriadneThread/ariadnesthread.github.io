@@ -32,6 +32,7 @@ author: maokaiyin
     "address": null
 }
 ```
+
 ###  boolean类型的处理
 
 不要使用`0`和`1`，也不要使用`“0”`和`“1”`，也不要尝试其他的方案。使用`true`和`false`。
