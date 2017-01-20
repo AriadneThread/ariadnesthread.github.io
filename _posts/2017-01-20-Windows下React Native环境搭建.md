@@ -1,9 +1,10 @@
 ---
+title: Windows下React Native环境搭建
+date: 2017-01-20 17:32:50 +08:00
+categories:
+- jekyll
 layout: post
-title:  "Windows下React Native环境搭建"
-date:   2017-01-20 09:32:50
 author: Darre
-categories: jekyll
 ---
 
 ## 前期准备：
